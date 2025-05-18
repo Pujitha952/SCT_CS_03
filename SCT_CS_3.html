@@ -41,7 +41,7 @@
             const password = passwordInput.value;
             let strength = 0;
 
-            // Check length
+            
             if (password.length >= 8) {
                 lengthResult.textContent = 'OK';
                 lengthResult.className = 'strong';
@@ -51,7 +51,7 @@
                 lengthResult.className = 'weak';
             }
 
-            // Check uppercase
+            
             if (/[A-Z]/.test(password)) {
                 uppercaseResult.textContent = 'OK';
                 uppercaseResult.className = 'strong';
@@ -61,7 +61,7 @@
                 uppercaseResult.className = 'weak';
             }
 
-            // Check lowercase
+            
             if (/[a-z]/.test(password)) {
                 lowercaseResult.textContent = 'OK';
                 lowercaseResult.className = 'strong';
@@ -71,7 +71,7 @@
                 lowercaseResult.className = 'weak';
             }
 
-            // Check numbers
+            
             if (/[0-9]/.test(password)) {
                 numbersResult.textContent = 'OK';
                 numbersResult.className = 'strong';
@@ -81,7 +81,7 @@
                 numbersResult.className = 'weak';
             }
 
-            // Check special characters
+            
             if (/[!@#$%^&*()_+\-=\]{};':"\\|,.<>?]/.test(password)) {
                 specialResult.textContent = 'OK';
                 specialResult.className = 'strong';
@@ -91,7 +91,7 @@
                 specialResult.className = 'weak';
             }
 
-            // Determine overall strength
+        
             if (strength === 5) {
                 result.textContent = 'Password strength: Strong';
                 result.className = 'strong';
